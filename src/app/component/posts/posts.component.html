@@ -1,0 +1,8 @@
+<div [className]="'mainDivAppSide'">
+  <div>
+    <app-post [className]="'appSide'" *ngFor="let p of posts" [post]="p"></app-post>
+  </div>
+  <div>
+    <router-outlet [className]="'routerSide'"></router-outlet>
+  </div>
+</div>

@@ -1,1 +1,5 @@
-<h2>{{greeting}</h2>
+<div [className]="'header'">
+  <button [className]="'usersBtn'"><a [routerLink]="['users']">users</a></button>
+  <button [className]="'postsBtn'"><a [routerLink]="['posts']">posts</a></button>
+</div>
+<router-outlet></router-outlet>

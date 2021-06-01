@@ -1,0 +1,8 @@
+<div [className]="'mainDivAppSide'">
+  <div>
+    <app-user [className]="'appSide'" *ngFor="let u of users" [user]="u"></app-user>
+  </div>
+  <div>
+    <router-outlet [className]="'routerSide'"></router-outlet>
+  </div>
+</div>
