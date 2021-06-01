@@ -13,12 +13,13 @@ import { UserDetailsComponent } from './component/user-details/user-details.comp
 import { PostsComponent } from './component/posts/posts.component';
 import { PostComponent } from './component/post/post.component';
 import { PostsDetailsComponent } from './component/posts-details/posts-details.component';
+import {DeactivatorService} from "./service/deactivator.service";
 let routes:Routes = [
   {path:'home',component:HomeComponent},
   {path:'users',component:UsersComponent, children: [
     {path:':id', component:UserDetailsComponent}]},
-  {path:'posts',component:PostsComponent},
-  {path:'posts/:id',component:PostsDetailsComponent},
+  {path:'posts',component:PostsComponent, canDeactivate:[DeactivatorService]},
+  {path:'posts/:id',component:PostsDetailsComponent, canActivate:[DeactivatorService]},
   {path:'comments',component:CommentsComponent},
 ]
 
