@@ -14,6 +14,8 @@ import { PostsComponent } from './component/posts/posts.component';
 import { PostComponent } from './component/post/post.component';
 import { PostsDetailsComponent } from './component/posts-details/posts-details.component';
 import {DeactivatorService} from "./service/deactivator.service";
+import {ResolveService} from "./service/resolve.service";
+import { TodoComponent } from './component/todo/todo.component';
 let routes:Routes = [
   {path:'home',component:HomeComponent},
   {path:'users',component:UsersComponent, children: [
@@ -21,6 +23,7 @@ let routes:Routes = [
   {path:'posts',component:PostsComponent, canDeactivate:[DeactivatorService]},
   {path:'posts/:id',component:PostsDetailsComponent, canActivate:[DeactivatorService]},
   {path:'comments',component:CommentsComponent},
+  {path:'todo',component:TodoComponent,resolve:{data:ResolveService}},
 ]
 
 @NgModule({
@@ -34,7 +37,8 @@ let routes:Routes = [
     UserDetailsComponent,
     PostsComponent,
     PostComponent,
-    PostsDetailsComponent
+    PostsDetailsComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,
