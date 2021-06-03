@@ -1,8 +1,5 @@
-<ul>
-  <li><a routerLink="/">home</a> </li>
-  <li><a routerLink="about">about</a> </li>
-  <li><a routerLink="users">users</a> </li>
-  <li><a routerLink="posts">posts</a> </li>
-  <li><a routerLink="comments">comments</a> </li>
-</ul>
+<div [className]="'header'">
+  <button ><a [routerLink]="['users']">users</a></button>
+  <button ><a [routerLink]="['posts']">posts</a></button>
+</div>
 <router-outlet></router-outlet>

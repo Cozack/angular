@@ -1,0 +1,12 @@
+.userPosts {
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
+
+}
+.left {
+  width: 70%
+}
+.right {
+  width: 30%;
+}

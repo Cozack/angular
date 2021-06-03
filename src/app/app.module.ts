@@ -6,8 +6,6 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import {RouterModule, Routes} from "@angular/router";
 let routes:Routes=[
-  {path:'',component:HomeComponent},
-  {path:'about',component:AboutComponent},
   {path:'users',loadChildren:() =>import('./modules/user/user.module').then(m =>m.UserModule )},
   {path:'posts',loadChildren:() => import('./modules/post/post.module').then(m => m.PostModule)},
   {path:'comments', loadChildren:() => import('./modules/comments/comment.module').then(m => m.CommentModule)}

@@ -1,6 +1,6 @@
-export interface Ipost {
+export interface IuserPost{
+  userId:number;
   id:number;
   title:string;
-  userId:number;
   body:string;
 }

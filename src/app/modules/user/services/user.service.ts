@@ -7,11 +7,12 @@ import {Iuser} from "../interface/iuser";
   providedIn: 'root'
 })
 export class UserService {
-  private url = 'https://jsonplaceholder.typicode.com/users';
+  private url = 'https://jsonplaceholder.typicode.com/users' ;
 
   constructor(private httpClient:HttpClient) { }
 
 getUsers():Observable<Iuser[]>{
   return this.httpClient.get<Iuser[]>(this.url)
 }
+
 }

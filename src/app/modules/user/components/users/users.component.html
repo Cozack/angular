@@ -1,1 +1,8 @@
-<app-user *ngFor="let user of users"[user]="user"></app-user>
+<div [className]="'userPosts'">
+  <div>
+    <app-user [className]="'left'" *ngFor="let user of users" [user]="user"></app-user>
+  </div>
+  <div [className]="'right'">
+    <router-outlet></router-outlet>
+  </div>
+</div>
