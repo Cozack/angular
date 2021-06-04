@@ -1,0 +1,6 @@
+<div [className]="'albumDiv'">
+  <div>
+    <app-album *ngFor="let album of albums" [album]="album"></app-album>
+  </div>
+  <router-outlet></router-outlet>
+</div>
