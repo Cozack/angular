@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
+import {DataTransferService} from "../../services/data-transfer.service";
 
 @Component({
   selector: 'app-user-details-from-state',
@@ -8,9 +9,10 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class UserDetailsFromStateComponent implements OnInit {
 userFromState:any;
-  constructor(private router:Router, private activatedRoute:ActivatedRoute) {
+  constructor(private router:Router, private activatedRoute:ActivatedRoute,private dataTransfer:DataTransferService) {
     activatedRoute.params.subscribe(value => {
       this.userFromState=this.router.getCurrentNavigation()?.extras.state;
+      this.dataTransfer.store.next(this.userFromState)
     })
 
   }

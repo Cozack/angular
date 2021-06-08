@@ -13,5 +13,7 @@ allUsers:any[]
   ngOnInit(): void {
   this.userService.getUsers().subscribe(value => this.allUsers=value)
   }
-
+catchUser(value:any){
+  console.log(value)
+}
 }
