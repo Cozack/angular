@@ -1,3 +1,4 @@
-<div *ngFor="let user of allUsers">
-  <app-user *ngIf="user.id%2===0" [singleUser]="user" (lift)="catchUser($event)"></app-user>
-</div>
+<app-user *ngFor="let user of allUsers" [singleUser]="user" (lift)="catchUser($event)"></app-user>
+<hr>
+<app-user-details [singleUser]="singleUser"></app-user-details>
+
