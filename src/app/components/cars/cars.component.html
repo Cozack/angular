@@ -1,0 +1,18 @@
+<form [formGroup]="myForm" (ngSubmit)="addCar()">
+  <div [className]="'formas'">
+    <div>
+      <label>add model</label>
+      <input type="text" [formControl]="addModel">
+    </div>
+    <div>
+      <label>add price</label>
+      <input type="text" [formControl]="addPrice">
+    </div>
+    <div>
+      <label>add year</label>
+      <input type="text" [formControl]="addYear">
+    </div>
+    <button>ADD CAR</button>
+  </div>
+</form>
+<app-car *ngFor="let car of cars " [car]="car"></app-car>
